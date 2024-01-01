@@ -66,56 +66,47 @@ function deleteEmployee(id)
 }
 
 
+
+
+
 function addData(){
      
-    data={
-     
-     "name":document.getElementById("name").value,
-     "contact_number":document.getElementById("contact_number").value,
-     "address":document.getElementById("location").value,
-     "salary":document.getElementById("salary").value,
-     "employee_id":document.getElementById("emp_id").value,
-     "role":document.getElementById("role").value
+      data={
+       
+       "name":document.getElementById("name").value,
+       "contact_number":document.getElementById("contact_number").value,
+       "address":document.getElementById("location").value,
+       "salary":document.getElementById("salary").value,
+       "employee_id":document.getElementById("emp_id").value,
+       "role":document.getElementById("role").value
+
+      }
+
+ ] 
+  
+   
+    fetch(url , 
+    {
+    method:"POST" ,
+     headers:{
+     'Accept':'application/json',
+     'Content-Type':'application/json'
+     },
+    body: JSON.stringify(data)
+     })
+    .then(res => res.json())
+    .then(res =>
+    {
+     window.location.href='frentend.html'
+   
+     } 
+
+     )
+
+    
+     alert('|| Congrasulation Data Added Succesfully ||')
 
     }
- 
-  fetch(url , 
-  {
-  method:"POST" ,
-   headers:{
-   'Accept':'application/json',
-   'Content-Type':'application/json'
-   },
-  body: JSON.stringify(data)
-   })
-  .then(res => res.json())
-  .then(res =>
-  {
-   window.location.href='frentend.html'
-   } 
-   )  
-   alert('|| Congrasulation Data Added Succesfully ||')
-  }
-
-  fetch(url)
-  .then(res => res.json())
-  .then(res =>
-  {  
-     console.log(res); 
-     console.table(res) 
-     document.getElementById('emp_id').value=res['employee_id']
-     document.getElementById('name').value=res['name']
-     document.getElementById('salary').value=res['salary'] 
-     document.getElementById('contact_number').value=res['contact_number']
-     document.getElementById('location').value=res['address']
-     document.getElementById('role').value=res['role']
-
-    l
-   
-
-  })
-
-
     function putData(){
      
       data={
