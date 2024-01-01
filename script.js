@@ -92,14 +92,9 @@ function addData(){
   .then(res =>
   {
    window.location.href='frentend.html'
- 
    } 
-
-   )
-
-  
+   )  
    alert('|| Congrasulation Data Added Succesfully ||')
-
   }
 
   fetch(url)
