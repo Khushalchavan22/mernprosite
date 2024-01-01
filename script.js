@@ -95,7 +95,7 @@ function addData(){
     .then(res => res.json())
     .then(res =>
     {
-     window.location.href='frentend.html'
+     window.location.href='frontend.html'
    
      } 
 
@@ -133,7 +133,7 @@ function addData(){
     .then(res => res.json())
     .then(res =>
     {
-     window.location.href='frentend.html'
+     window.location.href='frontend.html'
     
      } ,
 
