@@ -81,8 +81,6 @@ function addData(){
        "role":document.getElementById("role").value
 
       }
-
- ] 
   
    
     fetch(url , 
@@ -107,6 +105,8 @@ function addData(){
      alert('|| Congrasulation Data Added Succesfully ||')
 
     }
+
+
     function putData(){
      
       data={
