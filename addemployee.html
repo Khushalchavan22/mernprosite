@@ -1,0 +1,112 @@
+
+<style>
+
+  *{
+    margin: 15px;;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+
+body
+{
+  margin: 0;
+  padding: 0;
+  background: url(Screenshot\ 2023-12-26\ 185318.png);
+  background-size: cover;
+  background-position: center;
+  font-family: sans-serif;
+ 
+}
+
+.avd
+{
+height: 100px;
+width: 100px;
+}
+
+label
+{
+  width: 100px;
+  display: inline-block;
+}
+
+.khu{
+    background: linear-gradient(to bottom , #ffffff, #deae46);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+
+
+</style>
+
+  
+<center><div  class="khu"   style="color: brown;"><h1>Add Employee</h1></div></center>
+<center>
+  <body>
+   
+    <div>
+    <form  id="avd" method="post">
+      <b><label>ID:</label></b><input type="text" id="emp_id" autofocus="" size="30"><br><br>
+      <b><label>Name:</label></b> <input type="text" id="name" size="30"><br><br>
+      <b><label>Salary:</label></b> <input type="text" id="salary"  size="30"><br><br>
+      <b><label>contact_number:</label></b> <input type="text" id="contact_number"  size="30"><br><br>
+      <b><label>Location:</label></b><input type="text" id="location"  size="30"><br><br>
+      <b><label>Designation:</label></b> <input type="text" id="role"  size="30"><br><br>
+      <button class="btn btn-danger" onclick="addData()" style="color: brown; height: 40px; width: 70px ;">Submit</button>
+      </form>
+    </div>
+    </body>
+  
+</center>
+
+
+
+
+
+
+
+
+
+
+<script>
+    function addData(){
+     
+      data={
+       
+       "name":document.getElementById("name").value,
+       "contact_number":document.getElementById("contact_number").value,
+       "address":document.getElementById("location").value,
+       "salary":document.getElementById("salary").value,
+       "employee_id":document.getElementById("emp_id").value,
+       "role":document.getElementById("role").value
+
+      }
+
+     url="http://localhost:8080/employee"    
+  
+   
+    fetch(url , 
+    {
+    method:"POST" ,
+     headers:{
+     'Accept':'application/json',
+     'Content-Type':'application/json'
+     },
+    body: JSON.stringify(data)
+     })
+    .then(res => res.json())
+    .then(res =>
+    {
+     window.location.href='frentend.html'
+   
+     } 
+
+     )
+
+    
+     alert('|| Congrasulation Data Added Succesfully ||')
+
+    }
+</script>
