@@ -112,7 +112,7 @@ url=`http://localhost:8080/employee/${id}`
 
       }
 
-    url="http://localhost:8080/employee"
+    url="https://startling-pavlova-95436c.netlify.app/.netlify/functions/api/employee"
     fetch(url , 
     {
     method:"PUT" ,
@@ -125,7 +125,7 @@ url=`http://localhost:8080/employee/${id}`
     .then(res => res.json())
     .then(res =>
     {
-     window.location.href='frentend.html'
+     window.location.href='frontend.html'
     
      } ,
 
