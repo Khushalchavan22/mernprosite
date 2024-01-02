@@ -67,9 +67,7 @@ function deleteEmployee(id)
 
 
 
-
-
-function addData(){
+   function addData(){
      
       data={
        
@@ -81,6 +79,8 @@ function addData(){
        "role":document.getElementById("role").value
 
       }
+
+     url="http://localhost:8080/employee"    
   
    
     fetch(url , 
@@ -105,6 +105,8 @@ function addData(){
      alert('|| Congrasulation Data Added Succesfully ||')
 
     }
+
+
 
 
     function putData(){
