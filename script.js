@@ -80,8 +80,6 @@ function deleteEmployee(id)
 
       }
 
-     url="http://localhost:8080/employee"    
-  
    
     fetch(url , 
     {
